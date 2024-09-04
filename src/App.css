@@ -1,38 +1,61 @@
+/* The main application container */
 .App {
+  /* Center everything */
   text-align: center;
 }
 
+/* The logo */
 .App-logo {
+  /* Set the height of the logo */
   height: 40vmin;
+  /* Make the logo not respond to pointer events */
   pointer-events: none;
 }
 
+/* If the user prefers reduced motion, disable the animation */
 @media (prefers-reduced-motion: no-preference) {
+  /* Animate the logo */
   .App-logo {
+    /* Animate the logo spinning infinitely */
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+/* The header */
 .App-header {
+  /* Set the background color of the header */
   background-color: #282c34;
+  /* Set the minimum height of the header to 100vh */
   min-height: 100vh;
+  /* Set the display of the header to flex */
   display: flex;
+  /* Set the direction of the flexbox to column */
   flex-direction: column;
+  /* Align the items to the center */
   align-items: center;
+  /* Justify the content to the center */
   justify-content: center;
+  /* Set the font size of the header to 10px + 2vmin */
   font-size: calc(10px + 2vmin);
+  /* Set the color of the text in the header to white */
   color: white;
 }
 
+/* The link */
 .App-link {
+  /* Set the color of the link to #61dafb */
   color: #61dafb;
 }
 
+/* The animation for the logo */
 @keyframes App-logo-spin {
+  /* The animation starts at 0deg */
   from {
     transform: rotate(0deg);
   }
+  /* The animation ends at 360deg */
   to {
     transform: rotate(360deg);
   }
 }
+

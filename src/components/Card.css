@@ -1,0 +1,11 @@
+/* src/Card.css */
+.my-card {
+    max-width: 345px;
+    margin: 20px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .my-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+  
