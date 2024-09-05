@@ -8,29 +8,30 @@ import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
 import './Card.css'; // Import the CSS file for styling
 
-const MyCard = () => {
+const MyCard = ({title, description, img}) => {
+    console.log(img);
   return (
     <Card className="my-card">
       <CardMedia
         component="img"
         height="200"
-        width="140"
-        image="https://via.placeholder.com/140x200"
-        alt="placeholder"
+        width="200"
+        image={img}
+        alt={title}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Card Title
+          {title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          This is a sample card with some text content. You can use this space to describe something about the card.
+          {description}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button size="small" className="custom-button">
           Share
         </Button>
-        <Button size="small" color="primary">
+        <Button size="small" className="custom-button">
           Learn More
         </Button>
       </CardActions>

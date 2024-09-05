@@ -3,9 +3,21 @@
     max-width: 345px;
     margin: 20px;
     transition: box-shadow 0.3s ease;
+    position: relative;
   }
   
   .my-card:hover {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   }
   
+
+/* src/Card.css */
+.custom-button {
+  background-color: #1976d2;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #115293;
+}
