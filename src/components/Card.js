@@ -9,7 +9,6 @@ import Button from '@mui/material/Button';
 import './Card.css'; // Import the CSS file for styling
 
 const MyCard = ({title, description, img}) => {
-    console.log(img);
   return (
     <Card className="my-card">
       <CardMedia
