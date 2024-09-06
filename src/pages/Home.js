@@ -2,6 +2,7 @@
 import React from 'react';
 import './Home.css'; // Import the CSS file
 import MyCard from '../components/Card'; // Remove .js extension
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -32,20 +33,53 @@ export const items = [
     description: "This is the fifth card.",
     image: "https://via.placeholder.com/200x200",
   },
+  {
+    title: "Card 6",
+    description: "This is the sixth card.",
+    image: "https://via.placeholder.com/200x200",
+  },
+  {
+    title: "Card 7",
+    description: "This is the seventh card.",
+    image: "https://via.placeholder.com/200x200",
+  },
+  {
+    title: "Card 8",
+    description: "This is the eighth card.",
+    image: "https://via.placeholder.com/200x200",
+  },
+  {
+    title: "Card 9",
+    description: "This is the ninth card.",
+    image: "https://via.placeholder.com/200x200",
+  },
+  {
+    title: "Card 10",
+    description: "This is the tenth card.",
+    image: "https://via.placeholder.com/200x200",
+  },
 ];
 
 
 const HomePage = () => {
+  const navigate = useNavigate();
+
+  const handleCardClick = (id) => {
+    navigate(`/card/${id}`); 
+  };
+
   return (
     <div className="home-page">
-    <div className="card-container">
+    <div className="card-container" >
         {items.map((item, index) => (
+          <div key={index} onClick={() => handleCardClick(index)}>
           <MyCard 
             key={index} 
             title={item.title} 
             description={item.description} 
             img={item.image} 
           />
+          </div>
         ))}
       </div>
     </div>
