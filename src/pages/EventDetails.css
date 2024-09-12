@@ -1,11 +1,44 @@
-/* src/App.css */
-.card-container > div {
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  .card-container > div:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  }
-  
+/* src/EventDetails.css */
+
+.event-details{
+  margin: auto;
+  width: fit-content;
+}
+
+.event-details-card {
+  display: flex;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 16px; /* Equivalent to mt: 4 in MUI */
+}
+
+.event-details-image-container {
+  height: 650px;
+  width: 500px;
+}
+
+.event-details-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 16px;
+}
+
+.event-details-title {
+  font-size: 24px; /* Adjust as needed */
+  font-weight: bold;
+}
+
+.event-details-description {
+  margin-top: 8px;
+  color: #666; /* Example color */
+}
+
+.event-details-info {
+  margin-top: 8px;
+  color: #666; /* Example color */
+}
+
+.event-details-button {
+  margin-top: 16px; /* Equivalent to mt: 2 in MUI */
+}

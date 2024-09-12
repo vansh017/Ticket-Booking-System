@@ -9,8 +9,15 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
+import './EventDetails.css';
+import { useNavigate } from 'react-router-dom';
 
 const EventDetails = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick = (index) => {
+    navigate(`/book-ticket/${index}`); 
+  };
   const { id } = useParams(); // Get the event ID from the URL
   const event = items[id]; // Find the corresponding event
 
@@ -18,22 +25,24 @@ const EventDetails = () => {
     return <Typography variant="h6">Event not found!</Typography>;
   }
 
+  
+
   return (
-    <Card sx={{ maxWidth: '80%', margin: 'auto', mt: 5, padding: 2 }}>
+    <Card className='event-details'>
       <Grid container spacing={2}>
         {/* Image on the Left */}
-        <Grid item xs={12} md={8}>
-          <CardMedia
+        <Grid item className='event-details-image-container'>
+          <CardMedia className='event-details-image'
             component="img"
             height="100%"
             image={event.image}
             alt={event.title}
-            sx={{ objectFit: 'cover', height: '100%', width: '100%' }}
+            sx={{ objectFit: 'fill', height: '100%', width: '100%' }}
           />
         </Grid>
 
         {/* Description on the Right */}
-        <Grid item xs={12} md={4}>
+        <Grid item className='event-details-image-container'>
           <CardContent>
             <Typography gutterBottom variant="h3" component="div">
               {event.title}
@@ -55,7 +64,7 @@ const EventDetails = () => {
                 <strong>Venue:</strong> {event.venue}
               </Typography>
             </Box>
-            <Button variant="contained" color="primary">
+            <Button variant="contained" color="primary" onClick={() => handleButtonClick(id)}>
               Book Now
             </Button>
           </CardContent>

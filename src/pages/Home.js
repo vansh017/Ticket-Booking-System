@@ -48,16 +48,7 @@ export const items = [
     description: "This is the eighth card.",
     image: "https://via.placeholder.com/200x200",
   },
-  {
-    title: "Card 9",
-    description: "This is the ninth card.",
-    image: "https://via.placeholder.com/200x200",
-  },
-  {
-    title: "Card 10",
-    description: "This is the tenth card.",
-    image: "https://via.placeholder.com/200x200",
-  },
+  
 ];
 
 

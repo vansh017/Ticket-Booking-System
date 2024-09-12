@@ -1,0 +1,35 @@
+
+
+.location-selection-card{
+  margin: 10px;
+    border: 1px solid rgb(101 43 43);
+    padding: 10px 0px 10px 0px;
+    border-radius: 5px;
+}
+
+.location-selection-card:hover{
+
+    background-color:  #1d8ccc6b;
+
+}
+
+.location-selection-card-container{
+    display: flex;
+  flex-direction: column-reverse;
+  margin: 30px;
+}
+
+
+
+.location-selection-card.selected{
+  background-color:  #1d8ccc6b;
+
+}
+
+.book-ticket-container{
+  --Paper-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+  height: 800px;
+  width: 900px;
+  margin: auto;
+  position: relative;
+}
