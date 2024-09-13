@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import EventDetails from "./pages/EventDetails";
 import SelectLocation from "./pages/SelectLocation";
+import BookTicket from "./components/BookTicket";
 function App() {
   return (
     <Router>
@@ -15,10 +16,9 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/card/:id" element={<EventDetails />} />
-          <Route
-            path="book-ticket/:id/select-location"
-            element={<SelectLocation />}
-          />
+          <Route path="book-ticket/:id" element={<BookTicket />}>
+            <Route path="select-location" element={<SelectLocation />} />
+          </Route>
         </Routes>
         <Footer />
       </div>
