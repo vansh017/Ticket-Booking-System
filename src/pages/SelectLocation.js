@@ -13,12 +13,9 @@ const SelectLocation = () => {
   const event = items[id];
   const [selectedDivs, setSelectedDivs] = useState([]);
 
-  console.log("selected divs", selectedDivs);
+  console.log("selected divs", `/book-ticket/${id}/select-price`);
 
   const handleDivClick = (val) => {
-    console.log("adsfsadfa", val);
-    console.log("selected divs", selectedDivs);
-
     if (selectedDivs.includes(val)) {
       setSelectedDivs(selectedDivs.filter((i) => i !== val));
     } else {
@@ -49,7 +46,10 @@ const SelectLocation = () => {
           </tr>
         </table>
       </div>
-      <BookTicketFooter />
+      <BookTicketFooter
+        backPath={null}
+        nextPath={`/book-ticket/${id}/select-price`}
+      />
     </Card>
   );
 };
