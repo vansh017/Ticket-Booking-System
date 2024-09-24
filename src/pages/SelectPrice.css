@@ -1,0 +1,45 @@
+.price-selection-card-container{
+    display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.price-selection-card{
+    margin: 10px;
+    border: 1px solid rgb(101 43 43);
+    padding: 0px 0px 0px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: initial;
+    
+}
+
+.price-selection-card-content{
+    
+    margin: 10px
+
+}
+
+.price-selection-card-count{
+    padding-right:10px ;
+    margin: 5px
+
+}
+
+.rounded-btn{
+    background-color: #0d6efd;
+    color: white;
+    border: 1px solid rgb(101 43 43);
+    margin:5px;
+border-radius: 3px;}
+
+
+.price-selection-card p {/*  */
+    /* Add your styles here */
+    font-size: 15px;      /* Example: Set font size */
+    color: #333;          /* Example: Set text color */
+    margin: 0px;       /* Example: Add some margin */
+    line-height: 1.5;
+    padding:0px     /* Example: Set line height */
+  }
