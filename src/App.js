@@ -8,6 +8,7 @@ import EventDetails from "./pages/EventDetails";
 import SelectLocation from "./pages/SelectLocation";
 import BookTicket from "./components/BookTicket";
 import SelectPrice from "./pages/SelectPrice";
+import SelectPayment from "./pages/SelectPayment";
 function App() {
   return (
     <Router>
@@ -20,6 +21,7 @@ function App() {
           <Route path="book-ticket/:id" element={<BookTicket />}>
             <Route path="select-location" element={<SelectLocation />} />
             <Route path="select-price" element={<SelectPrice />} />
+            <Route path="select-payment" element={<SelectPayment />} />
           </Route>
         </Routes>
         <Footer />

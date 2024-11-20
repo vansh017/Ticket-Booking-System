@@ -1,0 +1,10 @@
+.payment-card{
+    margin: 10px;
+    border: 1px solid rgb(101 43 43);
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: initial;
+
+}

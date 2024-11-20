@@ -10,19 +10,19 @@ const initialTicketTypes = [
   {
     id: 1,
     type: "Silver",
-    price: "$2",
+    price: 2,
     quantity: 0,
   },
   {
     id: 2,
     type: "Gold",
-    price: "$5",
+    price: 5,
     quantity: 0,
   },
   {
     id: 3,
     type: "Diamond",
-    price: "$10",
+    price: 10,
     quantity: 0,
   },
 ];
@@ -52,50 +52,58 @@ const SelectPrice = () => {
   };
 
   useEffect(() => {
-    const totalPrice = ticketTypes.reduce(
+    console.log(ticketTypes);
+
+    const total = ticketTypes.reduce(
       (sum, ticket) => sum + ticket.price * ticket.quantity,
       0
     );
 
-    setTotalPrice(totalPrice);
+    setTotalPrice(total);
   }, [ticketTypes]);
 
   return (
-    <div>
+    <div className="select-price-container">
       <Typography variant="h4">Select Price</Typography>
-      <div className="price-selection-card-container">
-        <table>
-          <tr>
-            {ticketTypes.map((item) => (
-              <div className="price-selection-card">
-                <div className="price-selection-card-content">
-                  <p>Type : {item["type"]}</p>
-                  <p>Price : {item["price"]}</p>
-                </div>
-                <div className="price-selection-card-count">
-                  <div onClick={() => decrementQuantity(item.id)}>
-                    <RemoveRoundedIcon
-                      fontSize="small"
-                      className="rounded-btn"
-                    />
+
+      <div className="price-selection-card-wrapper">
+        <div className="price-selection-card-container">
+          <table>
+            <tr>
+              {ticketTypes.map((item) => (
+                <div className="price-selection-card">
+                  <div className="price-selection-card-content">
+                    <p>Type : {item.type}</p>
+                    <p>Price : ${item.price}</p>
                   </div>
-                  {item["quantity"]}
-                  <div onClick={() => incrementQuantity(item.id)}>
-                    <AddRoundedIcon fontSize="small" className="rounded-btn" />
+                  <div className="price-selection-card-count">
+                    <button onClick={() => decrementQuantity(item.id)}>
+                      <RemoveRoundedIcon
+                        fontSize="small"
+                        className="rounded-btn"
+                      />
+                    </button>
+                    {item["quantity"]}
+                    <button onClick={() => incrementQuantity(item.id)}>
+                      <AddRoundedIcon
+                        fontSize="small"
+                        className="rounded-btn"
+                      />
+                    </button>
                   </div>
                 </div>
-              </div>
-            ))}
-          </tr>
-        </table>
-        <div>
-          <p>Total Price : {totalPrice}</p>
+              ))}
+            </tr>
+          </table>
+        </div>
+        <div className="price-selection-card-price">
+          <p>Total Price : ${totalPrice}</p>
         </div>
       </div>
 
       <BookTicketFooter
         backPath={`/book-ticket/${id}/select-location`}
-        nextPath={`/book-ticket/0/select-price`}
+        nextPath={`/book-ticket/0/select-payment`}
       />
     </div>
   );
